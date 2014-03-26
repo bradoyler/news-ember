@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('health');
   this.route('tech');
   this.route('business');
+  this.route('pop-culture');
 
 });
 

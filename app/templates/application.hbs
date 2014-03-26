@@ -1,14 +1,20 @@
 <style type="text/css">
- .top-menu {
+.top-menu {
    list-style-type: none;
- }
+}
 
 li { 
 	display:inline;
 }
+
+.panel-front .top .panel-11 {
+ 	clear: none;
+ }
 </style>
 
-<h2 id='title'>Ember News</h2>
+<h2 id='title'>
+ {{#link-to 'index'}}Ember News{{/link-to}}
+</h2>
 
 <ul class="top-menu">
 	<li>{{#link-to 'news'}} News / {{/link-to}}</li>

@@ -15,7 +15,7 @@
     "start": "grunt server",
     "build": "grunt build:debug",
     "test": "grunt test:ci",
-    "postinstall": "bower install"
+    "postinstall": "bower install; grunt build:dist"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
   },
   "author": "",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "express": "~3.4.8",
     "lockfile": "~0.4.2",
     "bower": "~1.2.7",

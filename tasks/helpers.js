@@ -17,7 +17,7 @@ var taskRequirements = {
   imagemin: ['grunt-contrib-imagemin'],
   htmlmin: ['grunt-contrib-htmlmin'],
   fancySprites: ['grunt-fancy-sprites'],
-  autoprefixer: ['grunt-autoprefixer'],
+ // autoprefixer: ['grunt-autoprefixer'],
   rev: ['grunt-rev'],
   'validate-imports': ['grunt-es6-import-validate'],
   yuidoc: ['grunt-contrib-yuidoc']

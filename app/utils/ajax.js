@@ -1,8 +1,6 @@
 function ajax(url, options) {
   options = options || {};
-  // options.dataType='jsonp';
-  // options.callback='test';
- 
+
   return Ember.RSVP.Promise(function(resolve, reject){
     options.success = function(data) {
       Ember.run(null, resolve, data);

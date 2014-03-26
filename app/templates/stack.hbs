@@ -1,0 +1,45 @@
+<h3>Section</h3>
+<main class="stream stack-stream latest">
+    <div class="post-grid">
+    	<div id="stacklistview" class="ember-view sharing">
+		{{#each results}}
+			<article class="expanded">
+		          <div class="stack stack-{{unbound type}} stack-grid">
+		            <div class="stack-l-flag">
+		              <div class="base-l-flag">
+		                <a href="/news"><div class="base-flag">{{sections.firstObject.title}}</div></a>
+		              </div>
+		            </div>
+		            <time title="{{unbound last_published_utc}}" class="stack-time">{{unbound last_published_utc}}</time>
+		            <div>
+		              <h1 class="stack-heading-externallink">
+		                <a href="{{unbound canonical_url}}"  target="_blank">{{headline}}</a>
+		              </h1>
+		            </div>
+		            <div class="stack-l-story">
+		              <div class="stack-externallink-l-content">
+		                <div class="stack-collapse">
+		                 <div>
+		                   <div style="cursor:pointer" class="stack-button-toggle-default">
+		                    collapse story
+		                    <i class="stack-button-toggle-icon ss-navigateup"></i></div>
+		                  </div>
+		                </div> 
+		                <div>
+		                  <p class="stack-externallink-l-summary">
+		                    <img src="{{unbound main_art.url}}" width="150" height="100" class="stack-externallink-image" />
+		                      {{summary}}
+		                    <a href="{{unbound canonical_url}}" class="stack-externallink-continue" target="_blank">Continue reading</a>
+		                  </p>
+		                </div>
+		                <time title="{{unbound first_published_utc}}" class="stack-firstpub">First published {{first_published_utc}} {{bylines.firstObject.name}} - {{id}}</time>
+		              </div>
+		            </div>
+		          </div>
+		        </article>
+		{{/each}}
+
+		</div>
+	</div>
+</main>
+

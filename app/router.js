@@ -6,6 +6,13 @@ Router.map(function() {
   // this.resource('posts', function() {
   //   this.route('new');
   // });
+
+  this.route('news');
+  this.route('politics');
+  this.route('health');
+  this.route('tech');
+  this.route('business');
+
 });
 
 export default Router;

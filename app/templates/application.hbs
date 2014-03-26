@@ -1,3 +1,21 @@
+<style type="text/css">
+ .top-menu {
+   list-style-type: none;
+ }
+
+li { 
+	display:inline;
+}
+</style>
+
 <h2 id='title'>Ember News</h2>
+
+<ul class="top-menu">
+	<li>{{#link-to 'news'}} News / {{/link-to}}</li>
+	<li>{{#link-to 'tech'}} Tech /{{/link-to}}</li>
+	<li>{{#link-to 'health'}} Health /{{/link-to}}</li>
+	<li>{{#link-to 'politics'}} Politics /{{/link-to}}</li>
+	<li>{{#link-to 'business'}} Business {{/link-to}}</li>
+</ul>
 
 {{outlet}}

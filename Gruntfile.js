@@ -228,8 +228,7 @@ module.exports = function(grunt) {
                      'sass:compile',
                      'less:compile',
                      'stylus:compile',
-                     'copy:cssToResult',
-                     'autoprefixer:app'
+                     'copy:cssToResult'
                      ]));
 
   // Documentation

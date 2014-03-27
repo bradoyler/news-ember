@@ -71,12 +71,12 @@ module.exports = function(grunt) {
   // and loads tasks defined in `package.json`
   var config = _.extend({},
     require('load-grunt-config')(grunt, {
-        configPath: path.join('tasks/options'),
+        configPath: path.join(__dirname,'tasks/options'),
         loadGruntTasks: false,
         init: false
       }),
     require('load-grunt-config')(grunt, { // Custom options have precedence
-        configPath: path.join('tasks/custom-options'),
+        configPath: path.join(__dirname,'tasks/custom-options'),
         init: false
       })
   );

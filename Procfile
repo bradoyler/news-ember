@@ -1,1 +1,1 @@
-web: grunt dist
+web: grunt expressServer:dist:keepalive

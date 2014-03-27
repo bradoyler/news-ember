@@ -71,16 +71,16 @@ module.exports = function(grunt) {
   // and loads tasks defined in `package.json`
   var config = _.extend({},
     require('load-grunt-config')(grunt, {
-        configPath: path.join(__dirname, 'tasks/options'),
+        configPath: path.join('tasks/options'),
         loadGruntTasks: false,
         init: false
       }),
     require('load-grunt-config')(grunt, { // Custom options have precedence
-        configPath: path.join(__dirname, 'tasks/custom-options'),
+        configPath: path.join('tasks/custom-options'),
         init: false
       })
   );
-
+// __dirname, 
   grunt.loadTasks('tasks'); // Loads tasks in `tasks/` folder
 
   config.env = process.env;

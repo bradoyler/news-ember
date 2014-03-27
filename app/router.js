@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('tech');
   this.route('business');
   this.route('pop-culture');
+  this.route('article');
 
 });
 

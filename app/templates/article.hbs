@@ -1,0 +1,31 @@
+{{#each results}}
+	<article class="panel panel-post panel-beta">
+				<div class="panel-l-content">
+					<div class="panel-l-height-8">
+							<div class="base-l-flag">
+								<div class="base-flag">{{sections.firstObject.title}}</div>
+							</div>
+						<time title="2014-03-25 22:00:30 Z" class="panel-time-reversed">21 hours</time>
+						<small class="panel-credit-art-beta">{{unbound main_art.source}}</small>
+						<div id="ember2681" class="ember-view panel-img"> <a href="{{unbound canonical_url}}">
+							<img class="panel-img-lede" src="{{unbound main_art.url}}" width="440" data-bindattr-649="649" height="320" data-bindattr-650="650" alt="{{unbound main_art.caption}}">
+						</a></div>
+					</div>
+
+					<div class="panel-headline panel-post-headline">
+						<a href="{{unbound canonical_url}}">
+						<h1 class="panel-heading panel-l-height-2 panel-heading-beta" alt="{{unbound headline}}">{{unbound headline}}</h1>
+					    </a>
+					</div>
+					<div class="panel-byline-beta">
+						{{bylines.firstObject.name}}
+					</div>
+					<div class="button-toggle-share">
+						<i class="button-toggle-share-open button-toggle-share-icon uni-icon-font icon-export"></i>
+						<i class="button-toggle-share-close button-toggle-share-icon uni-icon-font icon-cancel"></i>
+					</div>
+					<p>{{summary}}</p>
+					<p>{{body.firstObject.html}}</p>
+				</div>
+</article>
+{{/each}}

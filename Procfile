@@ -1,1 +1,1 @@
-web: grunt server:dist
+web: grunt dist

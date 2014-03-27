@@ -80,8 +80,8 @@ module.exports = function(grunt) {
         init: false
       })
   );
-
-  grunt.loadTasks('tasks'); // Loads tasks in `tasks/` folder
+console.log('$$ test', __dirname);
+ // grunt.loadTasks('tasks'); // Loads tasks in `tasks/` folder
 
   config.env = process.env;
 

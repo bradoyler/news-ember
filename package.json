@@ -47,7 +47,8 @@
     "grunt-contrib-less": "~0.8.2",
     "grunt-es6-import-validate": "0.0.6",
     "request": "^2.34.0",
-    "express-namespace": "^0.1.1"
+    "express-namespace": "^0.1.1",
+    "connect-livereload": "^0.3.2"
   },
   "devDependencies": {
     "express": "~3.4.8",

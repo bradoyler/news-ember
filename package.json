@@ -21,9 +21,9 @@
     "type": "git",
     "url": "git://github.com/stefanpenner/ember-app-kit.git"
   },
-  "author": "Brad Oyler",
+  "author": "",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "express": "~3.4.8",
     "lockfile": "~0.4.2",
     "bower": "~1.2.7",

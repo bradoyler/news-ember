@@ -5,6 +5,13 @@ export default Ember.Route.extend({
 	templateName:'section',
 
 	model: function() {
-		return getJSON('/1.0/entriesbysection?section=news');
+
+		if(window._apicache['news']) {
+			return window._apicache['news'];
+		}
+
+		window._apicache['news'] = getJSON('/1.0/entriesbysection?section=news');
+
+		return window._apicache['news'];
 	}
 });

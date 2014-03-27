@@ -7,7 +7,12 @@ module.exports = function(server) {
     // Return fixture data for '/api/posts/:id'
     server.get('/entriesbysection', function(req, res) {
       var sectionName = req.query['section'] || 'news';
-      res.send(storiesbysection[sectionName]);
+
+      // simulate latency
+      setTimeout(function() {
+        res.send(storiesbysection[sectionName]);
+      }, 600);
+      
     });
 
     server.get('/cover', function(req, res) {

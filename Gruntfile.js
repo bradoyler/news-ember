@@ -81,7 +81,7 @@ module.exports = function(grunt) {
       })
   );
 console.log('$$ test', __dirname);
- // grunt.loadTasks('tasks'); // Loads tasks in `tasks/` folder
+  grunt.loadTasks('tasks'); // Loads tasks in `tasks/` folder
 
   config.env = process.env;
 

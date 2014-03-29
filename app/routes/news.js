@@ -4,14 +4,8 @@ export default Ember.Route.extend({
 
 	templateName:'section',
 
-	model: function() {
-
-		if(window._apicache['news']) {
-			return window._apicache['news'];
-		}
-
-		window._apicache['news'] = getJSON('/1.0/entriesbysection?section=news');
-
-		return window._apicache['news'];
+	model: function(params) {
+		return getJSON('/1.0/entriesbysection?section=news');
 	}
+
 });

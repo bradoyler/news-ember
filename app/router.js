@@ -7,13 +7,13 @@ Router.map(function() {
   //   this.route('new');
   // });
 
-  this.route('news');
-  this.route('politics');
-  this.route('health');
-  this.route('tech');
-  this.route('business');
-  this.route('pop-culture');
-  this.route('article');
+  this.resource('news');
+  this.resource('politics');
+  this.resource('health');
+  this.resource('tech');
+  this.resource('business');
+  this.resource('pop-culture');
+  this.resource('article', {path: 'article/:externalId'});
 
 });
 

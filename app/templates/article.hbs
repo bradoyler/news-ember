@@ -25,7 +25,10 @@
 						<i class="button-toggle-share-close button-toggle-share-icon uni-icon-font icon-cancel"></i>
 					</div>
 					<p>{{summary}}</p>
-					<p>{{body.firstObject.html}}</p>
+					{{#each body}}
+					  <p>{{{html}}}</p>
+					{{/each}}
+					
 				</div>
 </article>
 {{/each}}

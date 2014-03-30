@@ -1,6 +1,7 @@
 import Resolver from 'ember/resolver';
 
 window._apicache = {};
+window._apiurl = "http://newsapi-proxy.herokuapp.com/api";
 
 var App = Ember.Application.extend({
   LOG_ACTIVE_GENERATION: true,

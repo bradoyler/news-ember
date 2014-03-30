@@ -5,7 +5,7 @@ export default Ember.Route.extend({
 	templateName:'section',
 
 	model: function(params) {
-		return getJSON('/1.0/entriesbysection?section=news');
+		return getJSON(window._apiurl +'/entriesbysection?section=news');
 	}
 
 });

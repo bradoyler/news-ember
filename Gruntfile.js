@@ -252,5 +252,10 @@ module.exports = function(grunt) {
     grunt.file.mkdir('tmp/result');
   });
 
+  grunt.registerTask('ghpages', "Build a minified & production-ready version of your app.", [
+                     'dist',
+                     'copy:ghpages'
+                       ]);
+
   grunt.initConfig(config);
 };

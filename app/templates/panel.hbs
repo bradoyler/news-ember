@@ -6,8 +6,9 @@
 							</div>
 						<time title="2014-03-25 22:00:30 Z" class="panel-time-reversed">21 hours</time>
 						<small class="panel-credit-art-beta">{{unbound main_art.source}}</small>
-						<div id="ember2681" class="ember-view panel-img"> {{#link-to 'article' this.externalId}}
-							<img class="panel-img-lede" src="{{unbound main_art.url}}" width="440" data-bindattr-649="649" height="320" data-bindattr-650="650" alt="{{unbound main_art.caption}}">
+						<div id="ember2681" class="ember-view panel-img"> 
+						{{#link-to 'article' this.externalId}}
+							{{adaptive-img imgurl=main_art.url alt=main_art.caption}}
 						{{/link-to}}</div>
 					</div>
 

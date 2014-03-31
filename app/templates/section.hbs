@@ -1,11 +1,13 @@
-<h3>{{metadata.taxonomy.name}}</h3>
+{{!-- <h3>section: {{metadata.taxonomy.name}}</h3>--}}
 
 <main class="stream panel-l-front-wrapper">
   <section class="panel-front breakpoint-panel-front-xlarge">
   	<div class="panel-set top">
 		{{#each results}}
-			{{render 'panel' this}}
+			{{render 'panelalpha-front' this}}
 		{{/each}}
   	</div>
  </section>
 </main>
+
+<div>{{controller}}</div>

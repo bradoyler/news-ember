@@ -12,7 +12,8 @@ Router.map(function() {
   this.resource('health');
   this.resource('tech');
   this.resource('business');
-  this.resource('pop-culture');
+  this.resource('popculture');
+  this.resource('science');
   this.resource('article', {path: 'article/:externalId'});
 
 });

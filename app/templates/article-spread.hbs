@@ -1,0 +1,73 @@
+<article class="i0 expanded">
+  <div class="stack stack-grid">
+    <header class="stack-heading-l-spread">
+      <div class="stack-l-image-lede-container">
+        {{adaptive-img imgurl=main_art.url width=1160 height=600 alt=main_art.caption}}
+        <small class="stack-credit-art-spread">{{unbound main_art.source}}</small>
+        <time title="2014-03-31 00:01:58 Z" class="stack-time-reversed">2 hours</time>
+        <div class="stack-l-flag stack-l-flag-spread">
+          <div class="base-l-flag">
+            <a class="active" href="/#/tech">
+              <div class="base-flag">{{sections.firstObject.title}}</div>
+            </a> 
+          </div>
+        </div>
+      </div>
+      <div class="stack-heading-l-wrapper">
+        <h1 class="stack-heading stack-heading-spread">{{headline}}</h1>
+
+        <address class="stack-byline-spread hidden-sm">
+          <span class="stack-byline-spread-l">By&nbsp;{{bylines.firstObject.name}}</span>
+        </address>
+
+      </div>
+    </header>
+
+    <div class="stack-l-story stack-story-spread">
+      <div class="stack-l-content">
+        <div class="stack-collapse">
+            <div style="cursor:pointer" class="stack-button-toggle-default">
+              collapse story   
+              <i class="stack-button-toggle-icon ss-navigateup"></i>
+            </div>
+          </div> 
+          <address class="stack-byline-spread visible-sm">
+            <span class="stack-byline-spread-l">By&nbsp;{{bylines.firstObject.name}}</span>
+          </address>
+
+          <div class="stack-dropcap stack-spread-wrapper">
+
+            {{#each body}}
+                <p>{{{html}}}</p>
+             {{/each}}
+
+          </div>
+          <time title="2014-03-31 00:01:58 Z" class="stack-firstpub">First published March 30th 2014, 8:01 pm</time>
+
+          <div class="stack-talent">
+            <img class="stack-img-bio-talent" src="{{unbound bylines.firstObject.picture.url}}" />
+            <div class="stack-l-details">
+              <h1 class="stack-heading-talent">{{bylines.firstObject.name}}</h1>
+              <ul class="stack-list-share-talent">
+                <li class="stack-item-share-talent">
+                  <a href="{{unbound bylines.firstObject.facebook_page}}" class="
+                  stack-link-share-talent uni-icon-font icon-facebook-squared" target="_blank"></a>
+                </li>
+                <li class="stack-item-share-talent">
+                  <a href="https://twitter.com/{{unbound bylines.firstObject.twitter_handle}}" class="uni-icon-font icon-twitter stack-link-share-talent" target="_blank"></a>
+                </li>
+
+                <li class="stack-item-share-talent">
+                  <a href="{{unbound bylines.firstObject.gplus}}" class="uni-icon-font icon-gplus stack-link-share-talent" target="_blank"></a>
+                </li>
+              
+              </ul>
+              <p class="stack-bio-short-talent">
+                {{{bylines.firstObject.bio}}}
+              </p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</article>

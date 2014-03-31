@@ -1,34 +1,28 @@
-{{#each results}}
-	<article class="panel panel-post panel-beta">
-				<div class="panel-l-content">
-					<div class="panel-l-height-8">
-							<div class="base-l-flag">
-								<div class="base-flag">{{sections.firstObject.title}}</div>
-							</div>
-						<time title="2014-03-25 22:00:30 Z" class="panel-time-reversed">21 hours</time>
-						<small class="panel-credit-art-beta">{{unbound main_art.source}}</small>
-						<div id="ember2681" class="ember-view panel-img"> 						
-							  {{adaptive-img imgurl=main_art.url alt=main_art.caption}}
-					   </div>
-					</div>
 
-					<div class="panel-headline panel-post-headline">
-						<a href="{{unbound canonical_url}}">
-						<h1 class="panel-heading panel-l-height-2 panel-heading-beta" alt="{{unbound headline}}">{{unbound headline}}</h1>
-					    </a>
-					</div>
-					<div class="panel-byline-beta">
-						{{bylines.firstObject.name}}
-					</div>
-					<div class="button-toggle-share">
-						<i class="button-toggle-share-open button-toggle-share-icon uni-icon-font icon-export"></i>
-						<i class="button-toggle-share-close button-toggle-share-icon uni-icon-font icon-cancel"></i>
-					</div>
-					<p>{{summary}}</p>
-					{{#each body}}
-					  <p>{{{html}}}</p>
-					{{/each}}
-					
-				</div>
-</article>
-{{/each}}
+<main class="stack-stream">
+
+{{#if isSpread}}
+ {{render article-spread firstArticle}}
+{{/if}}
+
+{{#if isExternalLink}}
+ <div class="stack-l-content">
+     <span class="panel-cta-externallink-icon uni-icon-font icon-link-ext-alt"></span>
+	 <h3>From {{firstArticle.body.1.html}}: </h3>
+	 <h3> <a href="{{unbound firstArticle.body.0.html}}" target="blank"> {{firstArticle.headline}} </a>
+	</h3> 
+	<p> {{firstArticle.summary}}</p>
+</div>
+{{/if}}
+
+{{#if isPost}}
+	 {{render article-spread firstArticle}} 
+{{/if}}
+
+{{#if isVideo}}
+	 <h2>Video not available yet...</h2>
+{{/if}}
+
+</main>
+
+<p style="color:#ccc">{{results.firstObject.type}}</p>

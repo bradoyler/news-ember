@@ -1,28 +1,25 @@
-<style type="text/css">
-.top-menu {
-   list-style-type: none;
-}
-
-li { 
-	display:inline;
-}
-
-.panel-front .top .panel-11 {
- 	clear: none;
- 	height: auto;
- }
-</style>
 
 <h2 id='title'>
- {{#link-to 'index'}}Ember News{{/link-to}}
+ {{#link-to 'index'}}The News{{/link-to}}
 </h2>
 
 <ul class="top-menu">
-	<li>{{#link-to 'news'}} News / {{/link-to}}</li>
-	<li>{{#link-to 'tech'}} Tech /{{/link-to}}</li>
-	<li>{{#link-to 'health'}} Health /{{/link-to}}</li>
-	<li>{{#link-to 'politics'}} Politics /{{/link-to}}</li>
-	<li>{{#link-to 'business'}} Business {{/link-to}}</li>
+	{{#link-to 'news' tagName='li' href=false}}
+	{{#link-to 'news'}} News {{/link-to}}{{/link-to}}
+	{{#link-to 'tech' tagName='li' href=false}}
+	{{#link-to 'tech'}} Tech {{/link-to}}{{/link-to}}
+	{{#link-to 'health' tagName='li' href=false}}
+	{{#link-to 'health'}} Health {{/link-to}}{{/link-to}}
+	{{#link-to 'politics' tagName='li' href=false}}
+	{{#link-to 'politics'}} Politics {{/link-to}}{{/link-to}}
+	{{#link-to 'business' tagName='li' href=false}}
+	{{#link-to 'business'}} Business {{/link-to}}{{/link-to}}
+
+	{{#link-to 'science' tagName='li' href=false}}
+	{{#link-to 'science'}} Science {{/link-to}}{{/link-to}}
+
+	{{#link-to 'popculture' tagName='li' href=false}}
+	{{#link-to 'popculture'}} Pop culture {{/link-to}}{{/link-to}}
 </ul>
 
 {{outlet}}

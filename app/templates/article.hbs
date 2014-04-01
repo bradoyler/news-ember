@@ -19,10 +19,25 @@
 	 {{render article-spread firstArticle}} 
 {{/if}}
 
+{{#if isPhoto}}
+	 {{render article-spread firstArticle}} 
+{{/if}}
+
+{{#if isGallery}}
+	 {{render article-spread firstArticle}} 
+{{/if}}
+
 {{#if isVideo}}
 	 <h2>Video not available yet...</h2>
 {{/if}}
 
+
+
 </main>
 
-<p style="color:#ccc">{{results.firstObject.type}}</p>
+<p style="color:#ccc">Type: {{firstArticle.type}} |
+	Section: {{#each firstArticle.sections}} {{title}}, {{/each}} |
+	Topic: {{#each firstArticle.topics}} {{title}}, {{/each}} | 
+	Storyline: {{#each firstArticle.storyline}} {{title}}  {{/each}}
+
+ </p>

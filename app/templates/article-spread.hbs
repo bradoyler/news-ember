@@ -8,16 +8,16 @@
         <div class="stack-l-flag stack-l-flag-spread">
           <div class="base-l-flag">
             <a class="active" href="/#/tech">
-              <div class="base-flag">{{sections.firstObject.title}}</div>
+              <div class="base-flag">{{unbound sections.firstObject.title}}</div>
             </a> 
           </div>
         </div>
       </div>
       <div class="stack-heading-l-wrapper">
-        <h1 class="stack-heading stack-heading-spread">{{headline}}</h1>
+        <h1 class="stack-heading stack-heading-spread">{{unbound headline}}</h1>
 
         <address class="stack-byline-spread hidden-sm">
-          <span class="stack-byline-spread-l">By&nbsp;{{bylines.firstObject.name}}</span>
+          <span class="stack-byline-spread-l">By&nbsp;{{unbound bylines.firstObject.name}}</span>
         </address>
 
       </div>
@@ -32,13 +32,13 @@
             </div>
           </div> 
           <address class="stack-byline-spread visible-sm">
-            <span class="stack-byline-spread-l">By&nbsp;{{bylines.firstObject.name}}</span>
+            <span class="stack-byline-spread-l">By&nbsp;{{unbound bylines.firstObject.name}}</span>
           </address>
 
           <div class="stack-dropcap stack-spread-wrapper">
 
             {{#each body}}
-                <p>{{{html}}}</p>
+                <p>{{{unbound html}}}</p>
              {{/each}}
 
           </div>
@@ -47,7 +47,7 @@
           <div class="stack-talent">
             <img class="stack-img-bio-talent" src="{{unbound bylines.firstObject.picture.url}}" />
             <div class="stack-l-details">
-              <h1 class="stack-heading-talent">{{bylines.firstObject.name}}</h1>
+              <h1 class="stack-heading-talent">{{unbound bylines.firstObject.name}}</h1>
               <ul class="stack-list-share-talent">
                 <li class="stack-item-share-talent">
                   <a href="{{unbound bylines.firstObject.facebook_page}}" class="
@@ -63,7 +63,7 @@
               
               </ul>
               <p class="stack-bio-short-talent">
-                {{{bylines.firstObject.bio}}}
+                {{{unbound bylines.firstObject.bio}}}
               </p>
             </div>
           </div>

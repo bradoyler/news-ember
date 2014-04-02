@@ -7,14 +7,8 @@ Router.map(function() {
   //   this.route('new');
   // });
 
-  this.resource('news');
-  this.resource('politics');
-  this.resource('health');
-  this.resource('tech');
-  this.resource('business');
-  this.resource('popculture');
-  this.resource('science');
   this.resource('article', {path: 'article/:externalId'});
+  this.resource('section', {path:':id'});
 
 });
 

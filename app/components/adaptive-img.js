@@ -8,7 +8,7 @@ default Ember.Component.extend({
 		var height= this.get('height') || '240';
 		var imgurl = this.get('imgurl') ||'';
 
-		imgurl = imgurl.replace('/i/', '/j/').replace('.jpg', '.nbcnews-fp-'+width+'-'+ height +'.jpg')
+		imgurl = imgurl.toLowerCase().replace('/i/', '/j/').replace('.jpg', '.nbcnews-fp-'+width+'-'+ height +'.jpg')
 		.replace('.png', '.nbcnews-fp-'+width+'-'+ height +'.png');
 		return imgurl;
 	}.property('name')

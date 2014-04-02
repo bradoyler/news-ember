@@ -8,10 +8,10 @@
 {{#if isExternalLink}}
  <div class="stack-l-content">
      <span class="panel-cta-externallink-icon uni-icon-font icon-link-ext-alt"></span>
-	 <h3>From {{firstArticle.body.1.html}}: </h3>
-	 <h3> <a href="{{unbound firstArticle.body.0.html}}" target="blank"> {{firstArticle.headline}} </a>
+	 <h3>From {{unbound firstArticle.body.1.html}}: </h3>
+	 <h3> <a href="{{unbound firstArticle.body.0.html}}" target="blank"> {{unbound firstArticle.headline}} </a>
 	</h3> 
-	<p> {{firstArticle.summary}}</p>
+	<p> {{unbound firstArticle.summary}}</p>
 </div>
 {{/if}}
 
@@ -35,9 +35,9 @@
 
 </main>
 
-<p style="color:#ccc">Type: {{firstArticle.type}} |
-	Section: {{#each firstArticle.sections}} {{title}}, {{/each}} |
-	Topic: {{#each firstArticle.topics}} {{title}}, {{/each}} | 
-	Storyline: {{#each firstArticle.storyline}} {{title}}  {{/each}}
+<p style="color:#ccc">Type: {{unbound firstArticle.type}} |
+	Section: {{#each firstArticle.sections}} {{unbound title}}, {{/each}} |
+	Topic: {{#each firstArticle.topics}} {{unbound title}}, {{/each}} | 
+	Storyline: {{#each firstArticle.storyline}} {{unbound title}}  {{/each}}
 
  </p>

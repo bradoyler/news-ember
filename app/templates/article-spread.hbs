@@ -15,26 +15,18 @@
       </div>
       <div class="stack-heading-l-wrapper">
         <h1 class="stack-heading stack-heading-spread">{{unbound headline}}</h1>
-
-        <address class="stack-byline-spread hidden-sm">
-          <span class="stack-byline-spread-l">By&nbsp;{{unbound bylines.firstObject.name}}</span>
-        </address>
-
       </div>
     </header>
 
     <div class="stack-l-story stack-story-spread">
       <div class="stack-l-content">
         <div class="stack-collapse">
-            <div style="cursor:pointer" class="stack-button-toggle-default">
-              collapse story   
-              <i class="stack-button-toggle-icon ss-navigateup"></i>
-            </div>
-          </div> 
+      </div> 
+       {{#if bylines.firstObject.name}}
           <address class="stack-byline-spread visible-sm">
             <span class="stack-byline-spread-l">By&nbsp;{{unbound bylines.firstObject.name}}</span>
           </address>
-
+       {{/if}}
           <div class="stack-dropcap stack-spread-wrapper">
 
             {{#each body}}

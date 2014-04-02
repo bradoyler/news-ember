@@ -6,12 +6,11 @@
 {{/if}}
 
 {{#if isExternalLink}}
- <div class="stack-l-content">
-     <span class="panel-cta-externallink-icon uni-icon-font icon-link-ext-alt"></span>
-	 <h3>From {{unbound firstArticle.body.1.html}}: </h3>
-	 <h3> <a href="{{unbound firstArticle.body.0.html}}" target="blank"> {{unbound firstArticle.headline}} </a>
+ <div >
+	 <h3> 
+	 	<a href="{{unbound firstArticle.body.0.html}}" target="blank"><i class="icon-link-ext-alt"></i> From {{unbound firstArticle.body.1.html}}:  {{unbound firstArticle.headline}} </a>
 	</h3> 
-	<p> {{unbound firstArticle.summary}}</p>
+	<div> {{unbound firstArticle.summary}}</div>
 </div>
 {{/if}}
 
@@ -31,13 +30,11 @@
 	 <h2>Video not available yet...</h2>
 {{/if}}
 
-
-
 </main>
 
-<p style="color:#ccc">Type: {{unbound firstArticle.type}} |
+<div style="color:#ccc">Type: {{unbound firstArticle.type}} |
 	Section: {{#each firstArticle.sections}} {{unbound title}}, {{/each}} |
 	Topic: {{#each firstArticle.topics}} {{unbound title}}, {{/each}} | 
-	Storyline: {{#each firstArticle.storyline}} {{unbound title}}  {{/each}}
+	{{#each firstArticle.storyline}} Storyline: {{unbound title}}  {{/each}}
 
- </p>
+</div>

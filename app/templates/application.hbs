@@ -4,6 +4,8 @@
 </h2>
 
 <ul class="top-menu">
+	{{#link-to 'index' tagName='li' href=false}}
+	{{#link-to 'index'}} <i class='icon-home'></i> {{/link-to}}{{/link-to}}
 	{{#link-to 'section' 'news' tagName='li' href=false}}
 	{{#link-to 'section' 'news'}} News {{/link-to}}{{/link-to}}
 	{{#link-to 'section' 'tech' tagName='li' href=false}}
@@ -14,14 +16,13 @@
 	{{#link-to 'section' 'politics'}} Politics {{/link-to}}{{/link-to}}
 	{{#link-to 'section' 'business' tagName='li' href=false}}
 	{{#link-to 'section' 'business'}} Business {{/link-to}}{{/link-to}}
-
 	{{#link-to 'section' 'science' tagName='li' href=false}}
 	{{#link-to 'section' 'science'}} Science {{/link-to}}{{/link-to}}
-
 	{{#link-to 'section' 'pop-culture' tagName='li' href=false}}
 	{{#link-to 'section' 'pop-culture'}} Pop culture {{/link-to}}{{/link-to}}
-	{{#link-to 'section' 'nightly-news' tagName='li' href=false}}
-	{{#link-to 'section' 'nightly-news'}} Nightly {{/link-to}}{{/link-to}}
+	
+	{{!-- {{#link-to 'section' 'nightly-news' tagName='li' href=false}}
+	{{#link-to 'section' 'nightly-news'}} Nightly {{/link-to}}{{/link-to}} --}}
 </ul>
 
 {{outlet}}

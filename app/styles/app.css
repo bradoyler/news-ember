@@ -47,10 +47,27 @@ li {
 
  .panel-front{
  	border-top: 6px solid #ccc;
+ 	background-color: transparent;
  }
 
  .panel-img {
  	text-align: center;
  }
 
+ .stack-stream{
+ 	padding-top: 12px;
+ }
+
  #title { margin: 6px; }
+
+
+@media (max-width : 614px) {
+  .panel-l-height-5{
+    height:130px;
+  }
+  .panel-heading {
+  	font-size: 1rem;
+  	padding-top: .3rem;
+  	padding-bottom: .3rem;
+  }
+}

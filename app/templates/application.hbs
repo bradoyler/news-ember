@@ -1,11 +1,23 @@
 
-<h2 id='title'>
- {{#link-to 'index'}}The News{{/link-to}}
-</h2>
+{{!-- <h2 id='title'>
+ 
+</h2> --}}
 
-<ul class="top-menu">
+<nav class="navbar navbar-default" role="navigation">
+
+	  <div class="navbar-header">
+      <button type="button" {{action 'toggleMenu'}} class="navbar-toggle" data-toggle="collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      {{#link-to 'index' classNames="navbar-brand"}}The News{{/link-to}}
+    </div>
+ <ul class="nav navbar-nav">
+       
 	{{#link-to 'index' tagName='li' href=false}}
-	{{#link-to 'index'}} <i class='icon-home'></i> {{/link-to}}{{/link-to}}
+	{{#link-to 'index'}} <span class="glyphicon glyphicon-home"></span> {{/link-to}}{{/link-to}}
 	{{#link-to 'section' 'news' tagName='li' href=false}}
 	{{#link-to 'section' 'news'}} News {{/link-to}}{{/link-to}}
 	{{#link-to 'section' 'tech' tagName='li' href=false}}
@@ -23,6 +35,6 @@
 	
 	{{!-- {{#link-to 'section' 'nightly-news' tagName='li' href=false}}
 	{{#link-to 'section' 'nightly-news'}} Nightly {{/link-to}}{{/link-to}} --}}
-</ul>
-
+ </ul>
+</nav>
 {{outlet}}

@@ -1,27 +1,46 @@
-<article class="panel panel-11 panel-{{unbound type}} panel-3x5 panel-alpha">
-  <div class="panel-l-content">
-  	<div class="base-l-flag">
-  		<a href="#/{{unbound sections.firstObject.slug}}">
-  			<div class="base-flag">{{unbound sections.firstObject.title}}</div>
-		</a>  
-	</div>
-  	
-   {{!--  <time title="2014-03-29 10:46:43 Z" class="panel-time-reversed">15 hours</time> --}}
-    <div class="panel-l-height-5">
-     {{#if main_art.url}} 
-      <div class="panel-img"> 
-      	{{#link-to 'article' this.externalId}}
-			    {{adaptive-img imgurl=main_art.url alt=main_art.caption}}
-		    {{/link-to}}
- 	    </div>
-     {{/if}}
-    </div>
-    
-    <div class="panel-headline panel-spread-headline">
-      	{{#link-to 'article' this.externalId}}
-  			<h1 class="panel-heading panel-heading-alpha">{{unbound headline}}</h1>
-		{{/link-to}}
+{{#if headline}}
+<div class="panel panel-default">
+  <div class="panel-heading"> 
+    <h3 class="panel-title">
+    <a class="btn btn-default btn-xs" href="#/{{unbound sections.firstObject.slug}}">
+        {{unbound sections.firstObject.title}}
+    </a> 
+   </h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-4">
+        {{#if main_art.url}} 
+            {{#link-to 'article' this.externalId }}
+              {{adaptive-img imgurl=main_art.url alt=main_art.caption classNames='media-object'}}
+            {{/link-to}}
+         {{/if}}
+      </div>
+      <div class="col-md-8">
+          <h3>
+            {{#link-to 'article' this.externalId}}
+                {{unbound headline}}
+           {{/link-to}}
+          </h3>
+          <p>{{summary}}</p>
+          <p>{{{body.firstObject.html}}}</p>
+         
+      </div>
     </div>
     
   </div>
-</article>
+  <div class="panel-footer">
+    <div class="btn-group">
+      <button type="button" class="btn btn-default">
+        <span class="glyphicon glyphicon-star"></span>
+      </button>
+      <button type="button" class="btn btn-default">
+         <span class="glyphicon glyphicon-share"></span>
+      </button>
+      <button type="button" class="btn btn-default">
+        <span class="glyphicon glyphicon-comment"></span>
+      </button>
+   </div>
+  </div>
+</div>
+{{/if}}

@@ -1,7 +1,7 @@
 export
 default Ember.Component.extend({
 	tagName: 'img',
-	classNames: ['panel-img-lede'],
+	classNames: ['img-responsive'],
 	attributeBindings: ['src', 'alt'],
 	src: function() {
 		var $win = Ember.$(window);
